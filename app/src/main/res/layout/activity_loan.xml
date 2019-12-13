@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loanActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/rlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/Loanform"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="50dp"
+                android:paddingBottom="15dp"
+                android:text="Loan"
+                android:textAlignment="center"
+                android:fontFamily="@font/ubuntu"
+                android:textSize="44dp"
+                android:textColor="@android:color/black" />
+
+            <RelativeLayout
+                android:id="@+id/rlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Loanform"
+                android:layout_marginLeft="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/namelayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Name"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fnamelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/nameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/namelayout"
+                    android:layout_toEndOf="@id/namelayout"
+                    app:srcCompat="@drawable/ic_account_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/mobilenolayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/namelayout"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="25dp"
+                    android:hint="Contact">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/imobilenolayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:inputType="numberSigned"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/contactIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/namelayout"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/mobilenolayout"
+                    android:layout_toEndOf="@id/mobilenolayout"
+                    app:srcCompat="@drawable/ic_local_phone_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emaillayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Email ID"
+                    android:layout_below="@id/mobilenolayout"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iemaillayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/emailIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mobilenolayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/emaillayout"
+                    android:layout_toEndOf="@id/emaillayout"
+                    app:srcCompat="@drawable/ic_email_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/streetlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/emaillayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Street"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/istreetlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/streetIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/emaillayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/streetlayout"
+                    android:layout_toEndOf="@id/streetlayout"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/arealayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/streetlayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Area"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iarealayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/areaIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/streetlayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/arealayout"
+                    android:layout_toEndOf="@id/arealayout"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/landmarklayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/arealayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Landmark"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ilandmarklayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/landmarkIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/arealayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/landmarklayout"
+                    android:layout_toEndOf="@+id/landmarklayout"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/statelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/landmarklayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="State"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/istatelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/stateIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/landmarklayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/landmarklayout"
+                    android:layout_toEndOf="@+id/landmarklayout"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/citylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/statelayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="City"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/icitylayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/cityIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/statelayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/landmarklayout"
+                    android:layout_toEndOf="@+id/landmarklayout"
+                    app:srcCompat="@drawable/ic_add_location_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pincodelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/citylayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Pin Code"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ipincodelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:inputType="numberSigned"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/pinIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/citylayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/pincodelayout"
+                    android:layout_toEndOf="@id/pincodelayout"
+                    app:srcCompat="@drawable/ic_fiber_pin_black_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/banknamelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/pincodelayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Bank Name"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ibanknamelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/bankNameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pincodelayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/banknamelayout"
+                    android:layout_toEndOf="@id/banknamelayout"
+                    app:srcCompat="@drawable/bank" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Choice Account :"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/ubuntu"
+                    android:layout_below="@+id/banknamelayout"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold|normal"
+                    android:layout_marginLeft="70dp"/>
+
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/choice"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="70dp">
+
+                    <RadioButton
+                        android:id="@+id/option1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Current Account"
+                        android:fontFamily="@font/ubuntu"
+                        android:textSize="14sp"/>
+
+                    <RadioButton
+                        android:id="@+id/option2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Saving Account"
+                        android:fontFamily="@font/ubuntu"
+                        android:textSize="14sp"/>
+                </RadioGroup>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/radError"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radiogroup"
+                    android:text="@string/rad_error"
+                    android:layout_marginLeft="78dp"
+                    android:textColor="@color/errColor"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="10dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/bankaccountnolayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/radError"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Bank Account No."
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ibankaccountnolayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:inputType="numberSigned"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/accountIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/radError"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/bankaccountnolayout"
+                    android:layout_toEndOf="@id/bankaccountnolayout"
+                    app:srcCompat="@drawable/account_no"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/aadharcardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/bankaccountnolayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Aadhar Card No."
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iaadharcardlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="numberSigned"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/aadharIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bankaccountnolayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/aadharcardlayout"
+                    android:layout_toEndOf="@id/aadharcardlayout"
+                    app:srcCompat="@drawable/id_card"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pancardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/aadharcardlayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Pan Card No."
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ipancardlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/panIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/aadharcardlayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/pancardlayout"
+                    android:layout_toEndOf="@id/pancardlayout"
+                    app:srcCompat="@drawable/id_card"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/loantypelayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/pancardlayout"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    android:hint="Loan Type"
+                    app:boxStrokeColor="@android:color/black"
+                    app:boxStrokeWidth="3dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/iloantypelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:inputType="text"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/lTypeIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/pancardlayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/pancardlayout"
+                    android:layout_toEndOf="@id/pancardlayout"
+                    app:srcCompat="@drawable/loan_type"/>
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlayout2"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ic_chevron_right_black_40dp"
+                tools:ignore="VectorDrawableCompat" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

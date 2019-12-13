@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relLay1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/popRegCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        app:cardBackgroundColor="@color/mr_dynamic_dialog_background_dark"
+        app:cardCornerRadius="23dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/popTextHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/ubuntu"
+                android:text="AMAZING"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="44sp" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/doneRegisterImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popTextHead"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                android:paddingRight="15dp"
+                android:src="@drawable/done_anim" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/doneRegisterImg"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/nunito"
+                android:text="You Have Been Registered Successfully"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_below="@+id/popRegCard">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/popDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:layout_centerInParent="true"
+            android:textSize="22sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="7dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            app:cornerRadius="90dp"
+            android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+</RelativeLayout>

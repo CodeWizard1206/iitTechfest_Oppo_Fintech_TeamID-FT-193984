@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FT-193984</string>
+    <string name="signUp">Sign Up Form</string>
+    <string name="logIn">Login Form</string>
+    <string name="loan">Loan Form</string>
+    <string name="admit">Admission Form</string>
+    <string name="title_activity_loan">loanActivity</string>
+    <string name="title_activity_admission">admissionActivity</string>
+    <string name="rad_error">Select a Option</string>
+    <string name="title_activity_walkthrough">walkthroughActivity</string>
+    <string name="file_name">vaffiWalk.txt</string>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "236584112005",
+    "firebase_url": "https://vaffi-13a90.firebaseio.com",
+    "project_id": "vaffi-13a90",
+    "storage_bucket": "vaffi-13a90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:236584112005:android:dc02f1aad3876082e1beec",
+        "android_client_info": {
+          "package_name": "com.codewizard.vaffi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "236584112005-n25cacfjctcn62rnagvu4vllp1due2t0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codewizard.vaffi",
+            "certificate_hash": "f632341737228065bf61e3feed52ee9526f2137b"
+          }
+        },
+        {
+          "client_id": "236584112005-54827fdkkl30qtrr9m10d38rkhldorsa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAg1nDmQzfF5KJim9UAaWVvyXc-FbmZE7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "236584112005-54827fdkkl30qtrr9m10d38rkhldorsa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

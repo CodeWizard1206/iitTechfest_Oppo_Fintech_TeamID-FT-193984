@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".signUpActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/rLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/activityName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu"
+                android:paddingTop="50dp"
+                android:paddingBottom="15dp"
+                android:text="Sign up"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="44dp" />
+
+            <RelativeLayout
+                android:id="@+id/rLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activityName"
+                android:layout_marginLeft="8dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fnameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeColor="@android:color/black"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    app:boxStrokeWidth="3dp"
+                    android:hint="Name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/fnameInpuText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:textSize="16sp"
+                        android:inputType="text"
+                        android:textColor="@color/txtColor"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/nameIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/emailLayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/fnameLayout"
+                    android:layout_toEndOf="@id/fnameLayout"
+                    app:srcCompat="@drawable/ic_account_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/emailLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/fnameLayout"
+                    app:boxStrokeColor="@android:color/black"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    app:boxStrokeWidth="3dp"
+                    android:hint="E-Mail ID">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/emailInpuText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusedByDefault="false"
+                        android:textSize="16dp"
+                        android:textColor="@color/txtColor"
+                        android:inputType="textEmailAddress"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/emailIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fnameLayout"
+                    android:layout_alignBaseline="@id/contactLayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/emailLayout"
+                    android:layout_toEndOf="@id/emailLayout"
+                    app:srcCompat="@drawable/ic_email_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/contactLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/emailLayout"
+                    app:boxStrokeColor="@android:color/black"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    app:boxStrokeWidth="3dp"
+                    android:hint="Contact">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/contactInputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusableInTouchMode="false"
+                        android:inputType="numberSigned"
+                        android:textColor="@color/txtColor"
+                        android:singleLine="true"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/contactIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/emailLayout"
+                android:layout_alignBaseline="@id/contactLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="7dp"
+                android:layout_toLeftOf="@id/contactLayout"
+                android:layout_toEndOf="@id/contactLayout"
+                app:srcCompat="@drawable/ic_local_phone_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/contactLayout"
+                    app:boxStrokeColor="@android:color/black"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="10dp"
+                    app:passwordToggleEnabled="true"
+                    app:boxStrokeWidth="3dp"
+                    android:hint="Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passInputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:textColor="@color/txtColor"
+                        android:focusedByDefault="false"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/passIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/contactLayout"
+                    android:layout_alignBaseline="@id/passLayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/passLayout"
+                    android:layout_toEndOf="@id/passLayout"
+                    app:srcCompat="@drawable/ic_vpn_key_24dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/passReLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_below="@id/passLayout"
+                    app:boxStrokeColor="@android:color/black"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginRight="25dp"
+                    app:boxStrokeWidth="3dp"
+                    app:passwordToggleEnabled="true"
+                    android:hint="Confirm Password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/passReInputText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="true"
+                        android:focusedByDefault="false"
+                        android:textSize="16dp"
+                        android:inputType="textPassword"
+                        android:textColor="@color/txtColor"
+                        android:singleLine="true" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/passReIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/passLayout"
+                    android:layout_alignBaseline="@id/passReLayout"
+                    android:background="@color/colorAccent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_toLeftOf="@id/passLayout"
+                    android:layout_toEndOf="@id/passLayout"
+                    app:srcCompat="@drawable/ic_vpn_key_24dp" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayout2"
+                android:background="@color/colorAccent"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ic_chevron_right_black_40dp" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

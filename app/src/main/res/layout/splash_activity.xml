@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:animateLayoutChanges="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splashActivity">
+
+    <RelativeLayout
+        android:id="@+id/relLay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true">
+
+        <RelativeLayout
+            android:id="@+id/topWrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_logo"
+                android:layout_width="116dp"
+                android:layout_height="146dp"
+                android:src="@drawable/logo" />
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/relLay2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/app_logo"
+                android:layout_centerVertical="true">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appHead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/nunito"
+                    android:text="Welcome"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="50dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/relLay3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topWrap"
+            android:layout_centerHorizontal="true">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/subHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/ubuntu"
+                android:layout_marginTop="30dp"
+                android:text="select a form to continue"
+                android:textColor="@color/colorSubHead"
+                android:textSize="25sp" />
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scrollLay"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:layout_below="@id/subHead">
+
+                <RelativeLayout
+                    android:id="@+id/gridPar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <GridLayout
+                        android:id="@+id/reLay4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:rowCount="2"
+                        android:columnCount="2"
+                        android:useDefaultMargins="true"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp">
+
+                        <RelativeLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp">
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/admitBtn"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                app:borderWidth="2dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:src="@drawable/app_form"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@id/admitBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:text="@string/admit"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp"
+                                android:textColor="@color/txtColor"
+                                android:textAlignment="center"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp">
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/logInBtn"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                app:borderWidth="2dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:src="@drawable/login_form"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@id/logInBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:text="@string/logIn"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp"
+                                android:textColor="@color/txtColor"
+                                android:textAlignment="center"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp">
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/loanBtn"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                app:borderWidth="2dp"
+                                android:src="@drawable/loan_form"
+                                android:backgroundTint="@color/colorPrimary"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@id/loanBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:text="@string/loan"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp"
+                                android:textColor="@color/txtColor"
+                                android:textAlignment="center"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dp" >
+                            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:id="@+id/signUpBtn"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                app:borderWidth="2dp"
+                                android:backgroundTint="@color/colorPrimary"
+                                android:src="@drawable/sign_up"
+                                />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_marginTop="5dp"
+                                android:layout_below="@id/signUpBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_height="wrap_content"
+                                android:text="@string/signUp"
+                                android:fontFamily="@font/ubuntu"
+                                android:textSize="20sp"
+                                android:textColor="@color/txtColor"
+                                android:textAlignment="center"/>
+                        </RelativeLayout>
+
+                    </GridLayout>
+                </RelativeLayout>
+            </androidx.core.widget.NestedScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
