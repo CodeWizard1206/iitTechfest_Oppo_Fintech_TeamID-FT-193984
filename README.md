@@ -38,7 +38,7 @@ If any invalid data is put in any column the system will prompt for that invalid
 
 After your validation gets completed just click the submit floating button at the bottem of the form to make final submittion.
 
-![Algorithm schema](./images/submit.jpg)
+![Algorithm schema](./images/confirm.jpg)
 
 * Done:
 
@@ -49,6 +49,8 @@ After clicking the submit button as the submission gets completed by the system 
 ### Add-On
 
 The System uses Firebase to store the data you fill in the form, in order to use the same for futher operations or for checking wheather a same data value already exist in the database or not to avoid multiple submission of same form or data duplication. For Example: Sign up form and Login form both utilises same database, the user who register themselves using the signup form can check by login in with the regiered email id/contact and password. If login gets successful the system will prompt a logged in popup else it will throw a error voice message of "User does not exist".
+
+Also, system enables Keboard Focus for some columns where there might be chances that data filled can be incorrect due to pronunciation error or casing mistakes or situation where user don't want to say that particlular data in public like passwords, ATM pins, etc.
 
 ### NOTE
 
